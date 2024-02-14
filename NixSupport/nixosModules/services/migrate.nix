@@ -19,7 +19,7 @@ in
 		#!${pkgs.runtimeShell} -eu
 
                 cd ${migrateApp}
-                ${ihp.apps.x86_64-linux.migrate.program}
+                ${ihp.x86_64-linux.apps.migrate.program}
             '';
             environment = {
                 DATABASE_URL = cfg.databaseUrl;
