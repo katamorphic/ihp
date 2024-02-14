@@ -77,7 +77,6 @@ in
         '';
     };
 
-    services.ihp.databaseUser = "root";
     services.ihp.databaseUrl = "postgresql://${cfg.databaseUser}@/${cfg.databaseName}";
 
     # Enable automatic GC to avoid the disk from filling up
