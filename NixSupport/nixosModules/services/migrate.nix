@@ -16,6 +16,8 @@ in
                 Type = "oneshot";
             };
             script = ''
+		#!${pkgs.runtimeShell} -eu
+
                 cd ${migrateApp}
                 ${ihp.apps.x86_64-linux.migrate.program}
             '';
