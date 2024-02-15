@@ -11,7 +11,7 @@ in
             Type = "simple";
             Restart = "always";
             WorkingDirectory = "${cfg.package}/lib";
-            ExecStart = "${cfg.package}/bin/RunJobs";
+            ExecStart = "${cfg.package}/bin/RunProdServer";
         };
         environment =
             let
