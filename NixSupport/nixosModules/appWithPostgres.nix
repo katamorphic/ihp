@@ -74,6 +74,7 @@ in
             \i ${ihp}/lib/IHP/IHPSchema.sql
             \i ${cfg.schema}
             \i ${cfg.fixtures}
+            GRANT ALL PRIVILEGES ON DATABASE ${cfg.databaseName} TO PUBLIC;
         '';
     };
 
