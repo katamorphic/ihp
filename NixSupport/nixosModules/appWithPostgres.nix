@@ -75,7 +75,6 @@ in
         ];
         initialScript = pkgs.writeText "ihp-initScript" ''
             \connect ${cfg.databaseName}
-            CREATE TABLE IF NOT EXISTS schema_migrations (revision BIGINT NOT NULL UNIQUE);
             \i ${ihp}/lib/IHP/IHPSchema.sql
             \i ${cfg.schema}
             \i ${cfg.fixtures}
