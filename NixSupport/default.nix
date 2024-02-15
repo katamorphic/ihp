@@ -49,9 +49,10 @@ in
           make -j ${appBinary}
 
           # Build job runner if there are any jobs
-          if find -type d -iwholename \*/Job|grep .; then
-            make -j ${jobsBinary};
-          fi;
+          # if find -type d -iwholename \*/Job|grep .; then
+          #   make -j ${jobsBinary};
+          # fi;
+	  make -j ${jobsBinary};
 
           # Build all scripts if there are any
           mkdir -p Application/Script
