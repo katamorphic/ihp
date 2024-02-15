@@ -99,7 +99,7 @@ in
     nix.settings.auto-optimise-store = true;
 
     environment.variables = {
-        PGUSER = cfg.databaseUser;
+        PGUSER = "root";
         PGDATABASE = cfg.databaseName;
     };
 }
