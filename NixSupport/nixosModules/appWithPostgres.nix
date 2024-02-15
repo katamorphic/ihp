@@ -67,9 +67,9 @@ in
         initialScript = pkgs.writeText "ihp-initScript" ''
             CREATE USER ${cfg.databaseUser};
             CREATE DATABASE ${cfg.databaseName} OWNER ${cfg.databaseUser};
-            GRANT ALL PRIVILEGES ON DATABASE ${cfg.databaseName} TO "${cfg.databaseUser}";
+            GRANT ALL PRIVILEGES ON DATABASE ${cfg.databaseName} TO ${cfg.databaseUser};
             \connect ${cfg.databaseName}
-            SET ROLE '${cfg.databaseUser}';
+            SET ROLE ${cfg.databaseUser};
             CREATE TABLE IF NOT EXISTS schema_migrations (revision BIGINT NOT NULL UNIQUE);
             \i ${ihp}/lib/IHP/IHPSchema.sql
             \i ${cfg.schema}
